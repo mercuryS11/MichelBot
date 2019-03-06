@@ -20,14 +20,10 @@ bot.on('message', msg => {
         msg.reply("Heureux de te revoir parmis nous.")
     }
     if (msg.content === "!michel"){
-        msg.reply("Michel Baie, en réalisateur explosif :boom::boom: https://www.youtube.com/watch?v=TmDQkc0EonI")
+        msg.reply("Michel Baie, en réalisateur explosif \n :boom::boom: https://www.youtube.com/watch?v=TmDQkc0EonI")
     }
     if (msg.content.match(/salut/i)) {
             msg.reply('Je suis d\'accord avec toi.')
-    }
-    if (msg.content === prefix + "site"){
-        msg.channel.send("https://alexpgm.000webhostapp.com/")
-        console.log("Une personne a demandé pour aller sur ton site.")
     }
 
 });
