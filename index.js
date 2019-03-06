@@ -11,19 +11,16 @@ bot.on('ready', function () {
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
         return channel.send('Bienvenue sur le serveur de MICHEL BAIE' + member.displayName)
-        console.log(`${member.displayName} à rejoind le serveur.`)
+        console.log(`Hey ${member.displayName}, Bienvenue sur MICHEL BAIE :tada::hugging: !`)
     }).catch(console.error)
 });
 
 bot.on('message', msg => {
-    if (msg.content === "bonjour"){
+    if (msg.content === "Bonjour"){
         msg.reply("Heureux de te revoir parmis nous.")
     }
     if (msg.content === "!michel"){
         msg.reply("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
-    }
-    if (msg.content.match(/salut/i)) {
-            msg.reply('Je suis d\'accord avec toi.')
     }
 
 });
