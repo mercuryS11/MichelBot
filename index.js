@@ -5,13 +5,13 @@ const prefix = ("?");
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
-    bot.user.setActivity('rien').catch(console.error)
+    bot.user.setActivity('créer des SFX').catch(console.error)
 });
 
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le serveur de MICHEL BAIE' + member.displayName)
-        console.log(`Hey ${member.displayName}, Bienvenue sur MICHEL BAIE :tada::hugging: !`)
+        return channel.send('Hey member.displayName, bienvenue sur MICHEL BAIE :tada::hugging: ! )
+        console.log(`${member.displayName} joined`)
     }).catch(console.error)
 });
 
