@@ -14,7 +14,7 @@ bot.on('guildMemberAdd', member => {
     }).catch(console.error)
 });
 
-bot.on(msg => {
+bot.on('message', msg => {
     if (msg.content === "Bonjour"){
         msg.reply("Heureux de te revoir parmis nous.")
     }
