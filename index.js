@@ -20,7 +20,7 @@ bot.on('message', msg => {
         msg.reply("Heureux de te revoir parmis nous.")
     }
     if (msg.content === "!michel"){
-        msg.reply("Michel Baie, en réalisateur explosif \n :boom::boom: https://www.youtube.com/watch?v=TmDQkc0EonI")
+        msg.reply("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
     }
     if (msg.content.match(/salut/i)) {
             msg.reply('Je suis d\'accord avec toi.')
