@@ -11,7 +11,7 @@ bot.on('ready', function () {
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
         return channel.send('Hey member.displayName, bienvenue sur MICHEL BAIE :tada::hugging: ! )
-        console.log(`${member.displayName} joined`)
+        console.log(`${member.displayName}` joined`)
     }).catch(console.error)
 });
 
