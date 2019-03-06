@@ -16,16 +16,16 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('message', msg => {
     if (msg.content === "Bonjour"){
-        msg.reply("Heureux de te revoir parmis nous.")
+        msg.channel.send("Heureux de te revoir parmis nous.")
     }
     if (msg.content === "!michel"){
-        msg.reply("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
+        msg.channel.send("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
     }
     if (msg.content === "!ip"){
-        msg.reply("IP du serveur minecraft [Build/Claim] : play.freebuild.fr")
+        msg.channel.send("IP du serveur minecraft [Build/Claim] : play.freebuild.fr")
     }
     if (msg.content === "!en-marche"){
-        msg.reply("Viens avec notre ami Macron !\n https://www.youtube.com/watch?v=ajtOVzM2VIc")
+        msg.channel.send("Viens avec notre ami Macron !\n https://www.youtube.com/watch?v=ajtOVzM2VIc")
     }
     
 
