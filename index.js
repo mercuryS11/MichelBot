@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const token = process.env.token // a garder en version heroku
-const prefix = ("?");
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
@@ -22,6 +21,13 @@ bot.on('message', msg => {
     if (msg.content === "!michel"){
         msg.reply("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
     }
+    if (msg.content === "!ip"){
+        msg.reply("IP du serveur minecraft [Build/Claim] : play.freebuild.fr")
+    }
+    if (msg.content === "!en-marche"){
+        msg.reply("Viens avec notre ami Macron !\n https://www.youtube.com/watch?v=ajtOVzM2VIc")
+    }
+    
 
 });
 bot.login(token); //a garder en version heroku
