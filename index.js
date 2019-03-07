@@ -23,10 +23,6 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('message', msg => {
 	
-    if(sender.id === '552935091240697881'){
-	    return;
-    }
-	
     if (msg.content === "!michel"){
         msg.channel.send("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
     }
