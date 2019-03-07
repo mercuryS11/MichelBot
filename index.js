@@ -5,9 +5,9 @@ const exampleEmbed = new Discord.RichEmbed()
 	        .setColor('#FFA500')
 	        .setTitle('Avertissemet')
 	        .setAuthor('Michel Bot')
-	        .addField('Personne visée', '${message.author.username}')
-	        .addBlankField()
+	        .addField('Personne visée', '{message.author.username}')
 	        .addField('Raison', 'Vocabulaire grossier', true)
+.		.addBlankField()
 	        .setTimestamp()
 
 bot.on('ready', function () {
