@@ -15,13 +15,13 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', msg => {
-    if (msg.content.match(/merde/i)|| msg.content.match(/pd/i) || msg.content.match(/pédé/i) || msg.content.match(/enculé/i)|| msg.content.match(/connasse/i)|| msg.content.match(/putain/i){
+    if (msg.content.match(/merde/i)){
         msg.delete(1);
         const exampleEmbed = new Discord.RichEmbed()
 	        .setColor('#FFA500')
 	        .setTitle('Avertissemet')
 	        .setAuthor('Michel Bot')
-	        .addField('Personne visée', 'Some value here')
+	        .addField('Personne visée', '${message.author.username}')
 	        .addBlankField()
 	        .addField('Raison', 'Some value here', true)
 	        .setTimestamp()
