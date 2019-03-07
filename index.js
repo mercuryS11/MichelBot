@@ -3,11 +3,10 @@ const bot = new Discord.Client();
 const token = process.env.token // a garder en version heroku
 const exampleEmbed = new Discord.RichEmbed()
 	        .setColor('#FFA500')
-	        .setTitle('Avertissemet')
+	        .setTitle('Avertissement')
 	        .setAuthor('Michel Bot')
-	        .addField('Personne visée: ${message.author.username}', )
+	        .addField('Personne visée','quelqu\'un, c\'est pas au point ')
 	        .addField('Raison', 'Vocabulaire grossier', true)
-		.setThumbnail('message.author.avatarURL')
 	        .setTimestamp()
 
 bot.on('ready', function () {
