@@ -7,6 +7,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	        .setAuthor('Michel Bot')
 	        .addField('Personne visée: ${message.author.username}', )
 	        .addField('Raison', 'Vocabulaire grossier', true)
+		.setThumbnail(msg.author.avatarURL)
 	        .setTimestamp()
 
 bot.on('ready', function () {
