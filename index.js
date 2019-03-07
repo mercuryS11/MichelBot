@@ -11,7 +11,7 @@ const exampleEmbed = new Discord.RichEmbed()
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
-    bot.user.setActivity('créer des SFX', 'https://www.twitch.tv/misterjday').catch(console.error)
+    bot.user.setActivity('créer des SFX').catch(console.error)
 });
 
 bot.on('guildMemberAdd', member => {
