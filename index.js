@@ -1,6 +1,14 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const token = process.env.token // a garder en version heroku
+const exampleEmbed = new Discord.RichEmbed()
+	        .setColor('#FFA500')
+	        .setTitle('Avertissemet')
+	        .setAuthor('Michel Bot')
+	        .addField('Personne visée', '${message.author.username}')
+	        .addBlankField()
+	        .addField('Raison', 'Vocabulaire grossier', true)
+	        .setTimestamp()
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
@@ -17,16 +25,8 @@ bot.on('guildMemberAdd', member => {
 bot.on('message', msg => {
     if (msg.content.match(/merde/i)){
         msg.delete(1);
-        const exampleEmbed = new Discord.RichEmbed()
-	        .setColor('#FFA500')
-	        .setTitle('Avertissemet')
-	        .setAuthor('Michel Bot')
-	        .addField('Personne visée', '${message.author.username}')
-	        .addBlankField()
-	        .addField('Raison', 'Some value here', true)
-	        .setTimestamp()
+	msg.channel.send(exampleEmbed);
 
-channel.send(exampleEmbed);
     }
     if (msg.content === "!michel"){
         msg.channel.send("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
