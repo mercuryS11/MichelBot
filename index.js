@@ -25,7 +25,7 @@ bot.on('message', msg => {
     if (msg.content === "!michel"){
         msg.channel.send("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
     }
-    if(msg.content(/merde/i)){
+    if(msg.content.match(/merde/i)){
 	    msg.delete(1);
 	    msg.channel.send(exampleEmbed);
     }
