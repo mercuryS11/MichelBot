@@ -23,7 +23,7 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('message', msg => {
     if (msg.content.match(/merde/i)){
-        msg.delete(1);
+        msg.channel.delete(1);
 	msg.channel.send(exampleEmbed);
 
     }
