@@ -24,7 +24,8 @@ bot.on('guildMemberAdd', member => {
 bot.on('message', msg => {
     if (msg.content.match(/merde/i)){
         msg.delete(1);
-	msg.channel.send(exampleEmbed);
+	const channel = client.channels.find('règles', règles)
+        msg.channel.send(exampleEmbed)
 
     }
     if (msg.content === "!michel"){
