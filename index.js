@@ -27,8 +27,7 @@ bot.on('message', msg => {
     }
     if(msg.content.match(/merde/i)){
 	    msg.delete(1);
-	    bot.channels.get(548905201742905344);
-	    msg.channel.send(exampleEmbed);
+	    msg.author.send('T\'es en connard, mais quand même... Surveille ton langage !');
     }
     if (msg.content === "!ip"){
         msg.channel.send("IP du serveur minecraft [Build/Claim] : play.freebuild.fr")
