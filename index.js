@@ -11,7 +11,7 @@ const exampleEmbed = new Discord.RichEmbed()
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
-    bot.user.setActivity('créer des SFX').catch(console.error)
+    bot.user.setActivity('créer des SFX', 'https://www.twitch.tv/misterjday').catch(console.error)
 });
 
 bot.on('guildMemberAdd', member => {
@@ -27,7 +27,7 @@ bot.on('message', msg => {
     }
     if(msg.content.match(/merde/i)){
 	    msg.delete(1);
-	    msg.author.send('T\'es en connard, mais quand même... Surveille ton langage !');
+	    msg.author.send('T\'es un connard, mais quand même... Surveille ton langage !:rage:');
     }
     if (msg.content === "!ip"){
         msg.channel.send("IP du serveur minecraft [Build/Claim] : play.freebuild.fr")
