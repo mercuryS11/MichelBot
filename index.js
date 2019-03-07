@@ -25,6 +25,10 @@ bot.on('message', msg => {
     if (msg.content === "!michel"){
         msg.channel.send("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
     }
+    if(msg.content(/merde/i)){
+	    msg.delete(1);
+	    msg.channel.send(exampleEmbed);
+    }
     if (msg.content === "!ip"){
         msg.channel.send("IP du serveur minecraft [Build/Claim] : play.freebuild.fr")
     }
