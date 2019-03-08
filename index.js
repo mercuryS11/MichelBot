@@ -23,11 +23,17 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('message', msg => {
 	
+	let bannis = ['merde', 'salopard','pédé','pd','ptn','putain','connasse','salope','enculé','salaud']; //liste des mots bannis
+	
+	let foundInText = false;
+	for(var i in bannis){
+		if(msg.content.toLowerCase().includes(bannis[i].toLowerCase())) foundInText = true;
+	
     if (msg.content === "!michel"){
         msg.channel.send("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
     }
-    if(msg.content.match(/merde/i)|| msg.content.match(/salopard/i)||msg.content.match(/enculé/i)||msg.content.match(/pd/i)){
-	    msg.delete(1);
+    if(foundInText){
+	    msg.delete();
 	    msg.author.send('T\'es un connard, mais quand même... Surveille ton langage !:rage:');
     }
     if (msg.content === "!ip"){
