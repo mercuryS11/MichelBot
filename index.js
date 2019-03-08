@@ -29,6 +29,7 @@ bot.on('message', msg => {
 	let foundInText = false;
 	for(var i in bannis){
 		if(msg.content.toLowerCase().includes(bannis[i].toLowerCase())) foundInText = true;
+	}
 	
     if (msg.content === "!michel"){
         msg.channel.send("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
