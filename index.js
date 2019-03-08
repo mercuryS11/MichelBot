@@ -8,6 +8,7 @@ const exampleEmbed = new Discord.RichEmbed()
 	        .addField('Personne visée','quelqu\'un, c\'est pas au point ')
 	        .addField('Raison', 'Vocabulaire grossier', true)
 	        .setTimestamp()
+let bannis = ['merde', 'salopard','pédé','pd','ptn','putain','connasse','salope','enculé','salaud']; //liste des mots bannis
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
@@ -23,7 +24,7 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('message', msg => {
 	
-	let bannis = ['merde', 'salopard','pédé','pd','ptn','putain','connasse','salope','enculé','salaud']; //liste des mots bannis
+	
 	
 	let foundInText = false;
 	for(var i in bannis){
