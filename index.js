@@ -1,18 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const token = process.env.token // a garder en version heroku
-const exampleEmbed = new Discord.RichEmbed()
-	        .setColor('#FFA500')
-	        .setTitle('Avertissement')
-	        .setAuthor('Michel Bot')
-	        .addField('Personne visée','quelqu\'un, c\'est pas au point ')
-	        .addField('Raison', 'Vocabulaire grossier', true)
-	        .setTimestamp()
-let bannis = ['merde', 'salopard','pédé','pd','ptn','putain','connasse','salope','enculé','salaud']; //liste des mots bannis
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
-    bot.user.setActivity('créer des SFX').catch(console.error)
+    bot.user.setActivity('Helping people').catch(console.error)
 });
 
 bot.on('guildMemberAdd', member => {
@@ -31,8 +23,8 @@ bot.on('message', msg => {
 		if(msg.content.toLowerCase().includes(bannis[i].toLowerCase())) foundInText = true;
 	}
 	
-    if (msg.content === "!michel"){
-        msg.channel.send("Michel Baie, en réalisateur explosif :boom::boom:\n https://www.youtube.com/watch?v=TmDQkc0EonI")
+    if (msg.content === "FML" || "fml" ){
+        msg.channel.send("If you see this message, your version of Call To Battle is different from the server version. Latest version is 5.0.\nYou can download it at https://ctb2.com/download")
     }
     if(foundInText){
 	    msg.delete();
