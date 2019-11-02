@@ -15,20 +15,9 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', msg => {
-	
-	
-	
-	let foundInText = false;
-	for(var i in bannis){
-		if(msg.content.toLowerCase().includes(bannis[i].toLowerCase())) foundInText = true;
-	}
-	
+
     if (msg.content === "FML"){
         msg.channel.send("If you see this message, your version of Call To Battle is different from the server version. Latest version is 5.0.\nYou can download it at https://ctb2.com/download")
-    }
-    if(foundInText){
-	    msg.delete();
-	    msg.author.send('T\'es un connard, mais quand même... Surveille ton langage !:rage:');
     }
     if (msg.content === "!ip"){
         msg.channel.send("IP du serveur minecraft [Build/Claim] : play.freebuild.fr")
