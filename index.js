@@ -23,7 +23,7 @@ bot.on('message', msg => {
 		if(msg.content.toLowerCase().includes(bannis[i].toLowerCase())) foundInText = true;
 	}
 	
-    if (msg.content === "FML" || "fml" ){
+    if (msg.content === "FML"){
         msg.channel.send("If you see this message, your version of Call To Battle is different from the server version. Latest version is 5.0.\nYou can download it at https://ctb2.com/download")
     }
     if(foundInText){
